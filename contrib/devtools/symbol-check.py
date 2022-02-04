@@ -43,12 +43,12 @@ from utils import determine_wellknown_cmd
 MAX_VERSIONS = {
 'GCC':       (4,8,0),
 'GLIBC': {
-    pixie.EM_386:    (2,17),
-    pixie.EM_X86_64: (2,17),
-    pixie.EM_ARM:    (2,17),
-    pixie.EM_AARCH64:(2,17),
-    pixie.EM_PPC64:  (2,17),
-    pixie.EM_RISCV:  (2,27),
+    pixie.EM_386:    (2,29),
+    pixie.EM_X86_64: (2,29),
+    pixie.EM_ARM:    (2,29),
+    pixie.EM_AARCH64:(2,29),
+    pixie.EM_PPC64:  (2,29),
+    pixie.EM_RISCV:  (2,29),
 },
 'LIBATOMIC': (1,0),
 'V':         (0,5,0),  # xkb (bitcoin-qt only)
