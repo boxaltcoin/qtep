@@ -38,9 +38,9 @@ packages:
 - "libmicrohttpd-dev"
 - "libminiupnpc-dev"
 remotes:
-- "url": "https://github.com/qtumproject/qtum.git"
+- "url": "https://github.com/boxaltcoin/qtum.git"
   "dir": "qtum"
-- "url": "https://github.com/qtumproject/cpp-eth-qtum.git"
+- "url": "https://github.com/boxaltcoin/cpp-eth-qtum.git"
   "dir": "cpp-eth-qtum"
 files: []
 script: |

@@ -47,7 +47,7 @@ from the root of the repository.
 
 1. Clone the Qtum Core source code:
     ```shell
-    git clone --recursive https://github.com/qtumproject/qtum.git
+    git clone --recursive https://github.com/boxaltcoin/qtum.git
     cd qtum
     ```
 
