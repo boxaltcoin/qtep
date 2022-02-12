@@ -21,7 +21,7 @@ UniValue executionResultToJSON(const dev::eth::ExecutionResult& exRes)
     return result;
 }
 
-UniValue transactionReceiptToJSON(const QtumTransactionReceipt& txRec)
+UniValue transactionReceiptToJSON(const QtepTransactionReceipt& txRec)
 {
     UniValue result(UniValue::VOBJ);
     result.pushKV("stateRoot", txRec.stateRoot().hex());
@@ -68,9 +68,9 @@ UniValue CallToContract(const UniValue& params)
 
     dev::Address senderAddress;
     if(params.size() >= 3){
-        CTxDestination qtumSenderAddress = DecodeDestination(params[2].get_str());
-        if (IsValidDestination(qtumSenderAddress)) {
-            const PKHash *keyid = boost::get<PKHash>(&qtumSenderAddress);
+        CTxDestination qtepSenderAddress = DecodeDestination(params[2].get_str());
+        if (IsValidDestination(qtepSenderAddress)) {
+            const PKHash *keyid = boost::get<PKHash>(&qtepSenderAddress);
             senderAddress = dev::Address(HexStr(valtype(keyid->begin(),keyid->end())));
         }else{
             senderAddress = dev::Address(params[2].get_str());
@@ -390,7 +390,7 @@ UniValue SearchLogs(const UniValue& _params)
 
 CallToken::CallToken()
 {
-    setQtumTokenExec(this);
+    setQtepTokenExec(this);
 }
 
 bool CallToken::execValid(const int &func, const bool &sendTo)
@@ -496,12 +496,12 @@ bool CallToken::execEvents(const int64_t &fromBlock, const int64_t &toBlock, con
             if(numTopics > 1)
             {
                 tokenEvent.sender = topicsList[1].get_str().substr(24);
-                ToQtumAddress(tokenEvent.sender, tokenEvent.sender);
+                ToQtepAddress(tokenEvent.sender, tokenEvent.sender);
             }
             if(numTopics > 2)
             {
                 tokenEvent.receiver = topicsList[2].get_str().substr(24);
-                ToQtumAddress(tokenEvent.receiver, tokenEvent.receiver);
+                ToQtepAddress(tokenEvent.receiver, tokenEvent.receiver);
             }
             tokenEvent.blockHash = uint256S(eventMap["blockHash"].get_str());
             tokenEvent.blockNumber = eventMap["blockNumber"].get_int64();

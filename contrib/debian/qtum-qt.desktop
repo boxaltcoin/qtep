@@ -1,12 +1,12 @@
 [Desktop Entry]
 Version=0.17.6
-Name=Qtum Core
-Comment=Connect to the Qtum P2P Network
-Exec=qtum-qt %u
+Name=Qtep Core
+Comment=Connect to the Qtep P2P Network
+Exec=qtep-qt %u
 Terminal=false
 Type=Application
-Icon=qtum128
-MimeType=x-scheme-handler/qtum;
+Icon=qtep128
+MimeType=x-scheme-handler/qtep;
 Categories=Network;
-StartupWMClass=Qtum-qt
-Name[en_US]=qtum-qt
+StartupWMClass=Qtep-qt
+Name[en_US]=qtep-qt

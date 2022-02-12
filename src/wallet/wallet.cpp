@@ -31,7 +31,7 @@
 #include <wallet/coincontrol.h>
 #include <wallet/fees.h>
 #include <miner.h>
-#include <qtum/qtumledger.h>
+#include <qtep/qtepledger.h>
 
 #include <algorithm>
 #include <assert.h>
@@ -5763,23 +5763,23 @@ bool CWallet::RemoveSuperStakerEntry(const uint256& superStakerHash, bool fFlush
     return true;
 }
 
-void CWallet::StakeQtums(bool fStake, CConnman* connman)
+void CWallet::StakeQteps(bool fStake, CConnman* connman)
 {
-    ::StakeQtums(fStake, this, connman, stakeThread);
+    ::StakeQteps(fStake, this, connman, stakeThread);
 }
 
 void CWallet::StartStake(CConnman *connman)
 {
     if(IsWalletFlagSet(WALLET_FLAG_DISABLE_PRIVATE_KEYS))
     {
-        m_enabled_staking = !m_ledger_id.empty() && QtumLedger::instance().toolExists();
+        m_enabled_staking = !m_ledger_id.empty() && QtepLedger::instance().toolExists();
     }
     else
     {
         m_enabled_staking = true;
     }
 
-    StakeQtums(true, connman);
+    StakeQteps(true, connman);
 }
 
 void CWallet::StopStake()
@@ -5793,7 +5793,7 @@ void CWallet::StopStake()
     {
         m_stop_staking_thread = true;
         m_enabled_staking = false;
-        StakeQtums(false, 0);
+        StakeQteps(false, 0);
         stakeThread = 0;
         m_stop_staking_thread = false;
     }

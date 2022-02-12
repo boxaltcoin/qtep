@@ -1,30 +1,30 @@
-Qtum Core
+Qtep Core
 =============
 
 Setup
 ---------------------
-Qtum Core is the original Qtum client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Qtum transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+Qtep Core is the original Qtep client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Qtep transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Qtum Core, visit [qtumcore.org](https://www.qtumcore.org/).
+To download Qtep Core, visit [qtepcore.org](https://www.qtepcore.org/).
 
 Running
 ---------------------
-The following are some helpful notes on how to run Qtum Core on your native platform.
+The following are some helpful notes on how to run Qtep Core on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/qtum-qt` (GUI) or
-- `bin/qtumd` (headless)
+- `bin/qtep-qt` (GUI) or
+- `bin/qtepd` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run qtum-qt.exe.
+Unpack the files into a directory, and then run qtep-qt.exe.
 
 ### macOS
 
-Drag Qtum Core to your applications folder, and then run Qtum Core.
+Drag Qtep Core to your applications folder, and then run Qtep Core.
 
 ### Need Help?
 

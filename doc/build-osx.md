@@ -43,17 +43,17 @@ from the root of the repository.
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see [*Disable-wallet mode*](/doc/build-osx.md#disable-wallet-mode)).
 
-## Build Qtum Core
+## Build Qtep Core
 
-1. Clone the Qtum Core source code:
+1. Clone the Qtep Core source code:
     ```shell
-    git clone --recursive https://github.com/boxaltcoin/qtum.git
-    cd qtum
+    git clone --recursive https://github.com/boxaltcoin/qtep.git
+    cd qtep
     ```
 
-2.  Build Qtum Core:
+2.  Build Qtep Core:
 
-    Configure and build the headless Qtum Core binaries as well as the GUI (if Qt is found).
+    Configure and build the headless Qtep Core binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
     ```shell
@@ -84,30 +84,30 @@ In this case there is no dependency on Berkeley DB 4.8.
 Mining is also possible in disable-wallet mode using the `getblocktemplate` RPC call.
 
 ## Running
-Qtum Core is now available at `./src/qtumd`
+Qtep Core is now available at `./src/qtepd`
 
 Before running, you may create an empty configuration file:
 ```shell
-mkdir -p "/Users/${USER}/Library/Application Support/Qtum"
+mkdir -p "/Users/${USER}/Library/Application Support/Qtep"
 
-touch "/Users/${USER}/Library/Application Support/Qtum/qtum.conf"
+touch "/Users/${USER}/Library/Application Support/Qtep/qtep.conf"
 
-chmod 600 "/Users/${USER}/Library/Application Support/Qtum/qtum.conf"
+chmod 600 "/Users/${USER}/Library/Application Support/Qtep/qtep.conf"
 ```
 
-The first time you run qtumd, it will start downloading the blockchain. This process could
+The first time you run qtepd, it will start downloading the blockchain. This process could
 take many hours, or even days on slower than average systems.
 
 You can monitor the download process by looking at the debug.log file:
 ```shell
-tail -f $HOME/Library/Application\ Support/Qtum/debug.log
+tail -f $HOME/Library/Application\ Support/Qtep/debug.log
 ```
 
 ## Other commands:
 ```shell
-./src/qtumd -daemon      # Starts the qtum daemon.
-./src/qtum-cli --help    # Outputs a list of command-line options.
-./src/qtum-cli help      # Outputs a list of RPC commands when the daemon is running.
+./src/qtepd -daemon      # Starts the qtep daemon.
+./src/qtep-cli --help    # Outputs a list of command-line options.
+./src/qtep-cli help      # Outputs a list of RPC commands when the daemon is running.
 ```
 
 ## Notes

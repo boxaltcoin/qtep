@@ -73,7 +73,7 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "qtum.conf";
+const char * const BITCOIN_CONF_FILENAME = "qtep.conf";
 
 ArgsManager gArgs;
 
@@ -557,13 +557,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 
 fs::path GetDefaultDataDir()
 {
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Qtum
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Qtum
-    // Mac: ~/Library/Application Support/Qtum
-    // Unix: ~/.qtum
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Qtep
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Qtep
+    // Mac: ~/Library/Application Support/Qtep
+    // Unix: ~/.qtep
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Qtum";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Qtep";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -573,10 +573,10 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/Qtum";
+    return pathRet / "Library/Application Support/Qtep";
 #else
     // Unix
-    return pathRet / ".qtum";
+    return pathRet / ".qtep";
 #endif
 #endif
 }
@@ -1166,8 +1166,8 @@ std::string CopyrightHolders(const std::string& strPrefix)
     std::string strCopyrightHolders = strPrefix + copyright_devs;
 
     // Make sure Bitcoin Core copyright is not removed by accident
-    if (copyright_devs.find("Qtum Core") == std::string::npos) {
-        strCopyrightHolders += "\n" + strPrefix + "The Qtum Core Developers";
+    if (copyright_devs.find("Qtep Core") == std::string::npos) {
+        strCopyrightHolders += "\n" + strPrefix + "The Qtep Core Developers";
     }
     return strCopyrightHolders;
 }

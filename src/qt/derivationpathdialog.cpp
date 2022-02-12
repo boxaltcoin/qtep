@@ -1,6 +1,6 @@
 #include <qt/derivationpathdialog.h>
 #include <qt/forms/ui_derivationpathdialog.h>
-#include <qt/qtumhwitool.h>
+#include <qt/qtephwitool.h>
 #include <outputtype.h>
 #include <QRegularExpression>
 #include <QRegularExpressionValidator>
@@ -38,20 +38,20 @@ DerivationPathDialog::DerivationPathDialog(QWidget *parent, WalletModel* model, 
     QRegularExpressionValidator *legacyValidator = new QRegularExpressionValidator(ui->txtLegacy);
     legacyValidator->setRegularExpression(regEx);
     ui->txtLegacy->setCheckValidator(legacyValidator);
-    ui->txtLegacy->setText(QtumHwiTool::derivationPathPKH());
-    ui->txtLegacy->setPlaceholderText(QtumHwiTool::derivationPathPKH());
+    ui->txtLegacy->setText(QtepHwiTool::derivationPathPKH());
+    ui->txtLegacy->setPlaceholderText(QtepHwiTool::derivationPathPKH());
 
     QRegularExpressionValidator *P2SHValidator = new QRegularExpressionValidator(ui->txtP2SH);
     P2SHValidator->setRegularExpression(regEx);
     ui->txtP2SH->setCheckValidator(P2SHValidator);
-    ui->txtP2SH->setText(QtumHwiTool::derivationPathP2SH());
-    ui->txtP2SH->setPlaceholderText(QtumHwiTool::derivationPathP2SH());
+    ui->txtP2SH->setText(QtepHwiTool::derivationPathP2SH());
+    ui->txtP2SH->setPlaceholderText(QtepHwiTool::derivationPathP2SH());
 
     QRegularExpressionValidator *segWitValidator = new QRegularExpressionValidator(ui->txtSegWit);
     segWitValidator->setRegularExpression(regEx);
     ui->txtSegWit->setCheckValidator(segWitValidator);
-    ui->txtSegWit->setText(QtumHwiTool::derivationPathBech32());
-    ui->txtSegWit->setPlaceholderText(QtumHwiTool::derivationPathBech32());
+    ui->txtSegWit->setText(QtepHwiTool::derivationPathBech32());
+    ui->txtSegWit->setPlaceholderText(QtepHwiTool::derivationPathBech32());
 
     if(model && create)
     {

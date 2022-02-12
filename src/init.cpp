@@ -109,7 +109,7 @@ static const char* DEFAULT_ASMAP_FILENAME="ip_asn.map";
 /**
  * The PID file facilities.
  */
-static const char* BITCOIN_PID_FILENAME = "qtumd.pid";
+static const char* BITCOIN_PID_FILENAME = "qtepd.pid";
 
 static fs::path GetPidFile()
 {
@@ -189,7 +189,7 @@ void Shutdown(NodeContext& node)
     /// for example if the data directory was found to be locked.
     /// Be sure that anything that writes files or flushes caches only does this if the respective
     /// module was initialized.
-    util::ThreadRename("qtum-shutoff");
+    util::ThreadRename("qtep-shutoff");
 
 #ifdef ENABLE_WALLET
     // Force stop the stakers before any other components
@@ -634,7 +634,7 @@ void SetupServerArgs()
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/boxaltcoin/qtum>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/boxaltcoin/qtep>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i").translated, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
@@ -742,7 +742,7 @@ void DeleteBlockChainData()
     // Delete block chain data paths
     fs::remove_all(GetDataDir() / "chainstate");
     fs::remove_all(GetBlocksDir());
-    fs::remove_all(GetDataDir() / "stateQtum");
+    fs::remove_all(GetDataDir() / "stateQtep");
     fs::remove(GetDataDir() / "banlist.dat");
     fs::remove(GetDataDir() / FEE_ESTIMATES_FILENAME);
     fs::remove(GetDataDir() / "mempool.dat");
@@ -1500,7 +1500,7 @@ bool AppInitMain(NodeContext& node)
                 LogInstance().m_file_path.string()));
     }
 
-////////////////////////////////////////////////////////////////////// // qtum
+////////////////////////////////////////////////////////////////////// // qtep
     dev::g_logPost(std::string("\n\n\n\n\n\n\n\n\n\n"), NULL);
 //////////////////////////////////////////////////////////////////////
 
@@ -1916,7 +1916,7 @@ bool AppInitMain(NodeContext& node)
                 break;
             }
 
-                /////////////////////////////////////////////////////////// qtum
+                /////////////////////////////////////////////////////////// qtep
                 if((gArgs.IsArgSet("-dgpstorage") && gArgs.IsArgSet("-dgpevm")) || (!gArgs.IsArgSet("-dgpstorage") && gArgs.IsArgSet("-dgpevm")) ||
                   (!gArgs.IsArgSet("-dgpstorage") && !gArgs.IsArgSet("-dgpevm"))){
                     fGettingValuesDGP = true;
@@ -1925,16 +1925,16 @@ bool AppInitMain(NodeContext& node)
                 }
 
                 dev::eth::NoProof::init();
-                fs::path qtumStateDir = GetDataDir() / "stateQtum";
-                bool fStatus = fs::exists(qtumStateDir);
-                const std::string dirQtum(qtumStateDir.string());
+                fs::path qtepStateDir = GetDataDir() / "stateQtep";
+                bool fStatus = fs::exists(qtepStateDir);
+                const std::string dirQtep(qtepStateDir.string());
                 const dev::h256 hashDB(dev::sha3(dev::rlp("")));
-                dev::eth::BaseState existsQtumstate = fStatus ? dev::eth::BaseState::PreExisting : dev::eth::BaseState::Empty;
-                globalState = std::unique_ptr<QtumState>(new QtumState(dev::u256(0), QtumState::openDB(dirQtum, hashDB, dev::WithExisting::Trust), dirQtum, existsQtumstate));
+                dev::eth::BaseState existsQtepstate = fStatus ? dev::eth::BaseState::PreExisting : dev::eth::BaseState::Empty;
+                globalState = std::unique_ptr<QtepState>(new QtepState(dev::u256(0), QtepState::openDB(dirQtep, hashDB, dev::WithExisting::Trust), dirQtep, existsQtepstate));
                 dev::eth::ChainParams cp(chainparams.EVMGenesisInfo());
                 globalSealEngine = std::unique_ptr<dev::eth::SealEngineFace>(cp.createSealEngine());
 
-                pstorageresult.reset(new StorageResults(qtumStateDir.string()));
+                pstorageresult.reset(new StorageResults(qtepStateDir.string()));
                 if (fReset) {
                     pstorageresult->wipeResults();
                 }
@@ -1954,7 +1954,7 @@ bool AppInitMain(NodeContext& node)
                 fIsVMlogFile = fs::exists(GetDataDir() / "vmExecLogs.json");
                 ///////////////////////////////////////////////////////////
 
-                /////////////////////////////////////////////////////////////// // qtum
+                /////////////////////////////////////////////////////////////// // qtep
                 if (fAddressIndex != gArgs.GetBoolArg("-addrindex", DEFAULT_ADDRINDEX)) {
                     strLoadError = _("You need to rebuild the database using -reindex to change -addrindex").translated;
                     break;
@@ -1988,8 +1988,8 @@ bool AppInitMain(NodeContext& node)
             try {
                 LOCK(cs_main);
 
-                QtumDGP qtumDGP(globalState.get(), fGettingValuesDGP);
-                globalSealEngine->setQtumSchedule(qtumDGP.getGasSchedule(::ChainActive().Height() + (::ChainActive().Height()+1 >= chainparams.GetConsensus().QIP7Height ? 0 : 1) ));
+                QtepDGP qtepDGP(globalState.get(), fGettingValuesDGP);
+                globalSealEngine->setQtepSchedule(qtepDGP.getGasSchedule(::ChainActive().Height() + (::ChainActive().Height()+1 >= chainparams.GetConsensus().QIP7Height ? 0 : 1) ));
 
                 if (!is_coinsview_empty) {
                     uiInterface.InitMessage(_("Verifying blocks...").translated);

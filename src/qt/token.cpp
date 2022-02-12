@@ -38,30 +38,30 @@ Token::Token()
 
     // Create new call command line interface
     QStringList lstMandatory;
-    lstMandatory.append(QtumToken::paramAddress());
-    lstMandatory.append(QtumToken::paramDatahex());
+    lstMandatory.append(QtepToken::paramAddress());
+    lstMandatory.append(QtepToken::paramDatahex());
     QStringList lstOptional;
-    lstOptional.append(QtumToken::paramSender());
+    lstOptional.append(QtepToken::paramSender());
     d->call = new ExecRPCCommand(Token_NS::PRC_CALL, lstMandatory, lstOptional, QMap<QString, QString>());
 
     // Create new send command line interface
     lstMandatory.clear();
-    lstMandatory.append(QtumToken::paramAddress());
-    lstMandatory.append(QtumToken::paramDatahex());
+    lstMandatory.append(QtepToken::paramAddress());
+    lstMandatory.append(QtepToken::paramDatahex());
     lstOptional.clear();
-    lstOptional.append(QtumToken::paramAmount());
-    lstOptional.append(QtumToken::paramGasLimit());
-    lstOptional.append(QtumToken::paramGasPrice());
-    lstOptional.append(QtumToken::paramSender());
-    lstOptional.append(QtumToken::paramBroadcast());
-    lstOptional.append(QtumToken::paramChangeToSender());
-    lstOptional.append(QtumToken::paramPsbt());
+    lstOptional.append(QtepToken::paramAmount());
+    lstOptional.append(QtepToken::paramGasLimit());
+    lstOptional.append(QtepToken::paramGasPrice());
+    lstOptional.append(QtepToken::paramSender());
+    lstOptional.append(QtepToken::paramBroadcast());
+    lstOptional.append(QtepToken::paramChangeToSender());
+    lstOptional.append(QtepToken::paramPsbt());
     d->send = new ExecRPCCommand(Token_NS::PRC_SENDTO, lstMandatory, lstOptional, QMap<QString, QString>());
 
     // Create new event log interface
     d->eventLog = new EventLog();
 
-    setQtumTokenExec(this);
+    setQtepTokenExec(this);
 }
 
 Token::~Token()
@@ -163,12 +163,12 @@ bool Token::execEvents(const int64_t &fromBlock, const int64_t &toBlock, const i
             if(numTopics > 1)
             {
                 tokenEvent.sender = topicsList[1].toString().toStdString().substr(24);
-                Token::ToQtumAddress(tokenEvent.sender, tokenEvent.sender);
+                Token::ToQtepAddress(tokenEvent.sender, tokenEvent.sender);
             }
             if(numTopics > 2)
             {
                 tokenEvent.receiver = topicsList[2].toString().toStdString().substr(24);
-                Token::ToQtumAddress(tokenEvent.receiver, tokenEvent.receiver);
+                Token::ToQtepAddress(tokenEvent.receiver, tokenEvent.receiver);
             }
             tokenEvent.blockHash = uint256S(variantMap.value("blockHash").toString().toStdString());
             tokenEvent.blockNumber = variantMap.value("blockNumber").toLongLong();

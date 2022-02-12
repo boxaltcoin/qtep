@@ -48,7 +48,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>QtepGUI</name>
     <message>
         <source>&amp;Send</source>
         <translation>&amp;ناردن</translation>
@@ -449,6 +449,6 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>qtep-core</name>
     </context>
 </TS>

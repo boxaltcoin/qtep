@@ -30,7 +30,7 @@
 #include <util/system.h> // for GetBoolArg
 #include <wallet/coincontrol.h>
 #include <wallet/wallet.h> // for CRecipient
-#include <qt/qtumhwitool.h>
+#include <qt/qtephwitool.h>
 
 #include <stdint.h>
 
@@ -871,7 +871,7 @@ void WalletModel::checkHardwareWallet()
     if(hardwareWalletInitRequired)
     {
         // Init variables
-        QtumHwiTool hwiTool;
+        QtepHwiTool hwiTool;
         hwiTool.setModel(this);
         QString errorMessage;
         bool error = false;
@@ -1007,7 +1007,7 @@ void WalletModel::checkHardwareDevice()
         QString fingerprint_stake = getFingerprint(true);
         if(!fingerprint_stake.isEmpty())
         {
-            QtumHwiTool hwiTool;
+            QtepHwiTool hwiTool;
             QList<HWDevice> _devices;
             if(hwiTool.enumerate(_devices, true))
             {
@@ -1025,7 +1025,7 @@ void WalletModel::checkHardwareDevice()
         QString fingerprint_not_stake = getFingerprint();
         if(!fingerprint_not_stake.isEmpty())
         {
-            QtumHwiTool hwiTool;
+            QtepHwiTool hwiTool;
             QList<HWDevice> _devices;
             if(hwiTool.enumerate(_devices, false))
             {

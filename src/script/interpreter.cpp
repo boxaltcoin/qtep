@@ -1133,7 +1133,7 @@ bool EvalScript(std::vector<std::vector<unsigned char> >& stack, const CScript& 
                 }
                 break;
 
-                //////////////////////////////////////////////////////// qtum
+                //////////////////////////////////////////////////////// qtep
                 case OP_SENDER:
                 {
                     if(!(flags & SCRIPT_OUTPUT_SENDER))

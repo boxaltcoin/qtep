@@ -23,7 +23,7 @@ class CCoinsViewDBCursor;
 class uint256;
 struct CHeightTxIndexKey;
 struct CHeightTxIndexIteratorKey;
-//////////////////////////////////// //qtum
+//////////////////////////////////// //qtep
 struct CAddressIndexKey;
 struct CAddressUnspentKey;
 struct CAddressUnspentValue;
@@ -143,7 +143,7 @@ public:
     bool ReadFlag(const std::string &name, bool &fValue);
     bool LoadBlockIndexGuts(const Consensus::Params& consensusParams, std::function<CBlockIndex*(const uint256&)> insertBlockIndex);
 
-    ////////////////////////////////////////////////////////////////////////////// // qtum
+    ////////////////////////////////////////////////////////////////////////////// // qtep
     bool WriteHeightIndex(const CHeightTxIndexKey &heightIndex, const std::vector<uint256>& hash);
 
     /**
@@ -195,7 +195,7 @@ public:
     //////////////////////////////////////////////////////////////////////////////
 };
 
-//////////////////////////////////////////////////////////// // qtum
+//////////////////////////////////////////////////////////// // qtep
 struct CHeightTxIndexIteratorKey {
     unsigned int height;
 

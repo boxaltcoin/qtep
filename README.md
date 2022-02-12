@@ -1,50 +1,50 @@
-What is Qtum?
+What is Qtep?
 -------------
 
-Qtum is a decentralized blockchain project built on Bitcoin's UTXO model, with support for Ethereum Virtual Machine based smart contracts, and secured by a proof of stake consensus model. It achieves this through the revolutionary Account Abstraction Layer which allows the EVM to communicate with Qtum's Bitcoin-like UTXO blockchain. For more general information about Qtum as well as links to join our community, go to https://qtum.org
+Qtep is a decentralized blockchain project built on Bitcoin's UTXO model, with support for Ethereum Virtual Machine based smart contracts, and secured by a proof of stake consensus model. It achieves this through the revolutionary Account Abstraction Layer which allows the EVM to communicate with Qtep's Bitcoin-like UTXO blockchain. For more general information about Qtep as well as links to join our community, go to https://qtep.org
 
-Welcome to the Qtum Ignition Main Network. This is the main network where the tokens hold value and should be guarded very carefully. If you are testing the network, or developing unstable software on Qtum, we highly recommend using either testnet or regtest mode. 
+Welcome to the Qtep Ignition Main Network. This is the main network where the tokens hold value and should be guarded very carefully. If you are testing the network, or developing unstable software on Qtep, we highly recommend using either testnet or regtest mode. 
 
-The major features of the Qtum network include:
+The major features of the Qtep network include:
 
-1. Compatibility with the Ethereum Virtual Machine, which allows for compatibility with most existing Solidity based smart contracts. No special solidity compiler is required to deploy your smart contract to Qtum. 
-2. A Proof of Stake consensus system which is optimized for Qtum's contract model. Any user can stake and help to secure the network. There is no voting, master nodes, or minimum amount required. There have been transactions as small as 2 Qtum that have created blocks in the past. Staking from smart contracts is under development.
+1. Compatibility with the Ethereum Virtual Machine, which allows for compatibility with most existing Solidity based smart contracts. No special solidity compiler is required to deploy your smart contract to Qtep. 
+2. A Proof of Stake consensus system which is optimized for Qtep's contract model. Any user can stake and help to secure the network. There is no voting, master nodes, or minimum amount required. There have been transactions as small as 2 Qtep that have created blocks in the past. Staking from smart contracts is under development.
 3. The Decentralized Governance Protocol is completely implemented and functional, which allows certain network parameters to be modified without a fork or other network disruption. This currently controls parameters like block size, gas prices, etc. 
-4. Uses the UTXO transaction model and is compatible with Bitcoin, allowing for existing tooling and workflows to be used with Qtum. This allows for the infamous SPV protocol to be used which is ideal for light wallets on mobile phones and IoT devices.
+4. Uses the UTXO transaction model and is compatible with Bitcoin, allowing for existing tooling and workflows to be used with Qtep. This allows for the infamous SPV protocol to be used which is ideal for light wallets on mobile phones and IoT devices.
 
-Note: Qtum Core is considered beta software. We make no warranties or guarantees of its security or stability.
+Note: Qtep Core is considered beta software. We make no warranties or guarantees of its security or stability.
 
-Qtum Documentation and Usage Resources
+Qtep Documentation and Usage Resources
 ---------------
 
-These are some resources that might be helpful in understanding Qtum.
+These are some resources that might be helpful in understanding Qtep.
 
 Basic usage resources:
 
-* [User guide](https://docs.qtum.site/en/)
-* [Qtum-Qt Wallet Tutorial](https://github.com/boxaltcoin/documents/tree/master/en/Qtum-Wallet-Tutorial#qtum-qt-wallet-tutorial)
-* [Qtum staking tutorial](https://github.com/boxaltcoin/documents/tree/master/en/How-to-Stake-with-Qtum)
-* [Qtum tutorial on Raspberry Pi](https://github.com/boxaltcoin/documents/tree/master/en/Qtum-on-Raspberry-Pi)
-* [Running Qtum on Amazon AWS using Qtum AMI](https://github.com/boxaltcoin/documents/tree/master/en/Qtum-AWS)
-* [Encrypting and unlocking wallet](https://github.com/boxaltcoin/documents/tree/master/en/Encrypt-and-Unlock-Qtum-Wallet)
+* [User guide](https://docs.qtep.site/en/)
+* [Qtep-Qt Wallet Tutorial](https://github.com/boxaltcoin/documents/tree/master/en/Qtep-Wallet-Tutorial#qtep-qt-wallet-tutorial)
+* [Qtep staking tutorial](https://github.com/boxaltcoin/documents/tree/master/en/How-to-Stake-with-Qtep)
+* [Qtep tutorial on Raspberry Pi](https://github.com/boxaltcoin/documents/tree/master/en/Qtep-on-Raspberry-Pi)
+* [Running Qtep on Amazon AWS using Qtep AMI](https://github.com/boxaltcoin/documents/tree/master/en/Qtep-AWS)
+* [Encrypting and unlocking wallet](https://github.com/boxaltcoin/documents/tree/master/en/Encrypt-and-Unlock-Qtep-Wallet)
 * [Testnet guide](https://github.com/boxaltcoin/documents/blob/master/en/Testnet-User-Guide.md)
-* [Block explorer](https://qtum.info), [Older explorer](https://explorer.qtum.org)
+* [Block explorer](https://qtep.info), [Older explorer](https://explorer.qtep.org)
 
 
 Development resources:
 
-* [Qtum Book - A Developer's Guide To QTUM](http://book.qtum.site/en/)
-* [Qtum contract usage](https://docs.qtum.site/en/QRC20-Token-Introduce.html)
-* [Deploying a custom token to Qtum](https://blog.qtum.org/qtum-custom-token-walkthrough-467d725fa27d)
-* [QtumJS document](https://boxaltcoin.github.io/qtumjs-doc/)
-* [Smart contract ICO example](http://book.qtum.site/en/part3/ico.htm)
-* [Early example faucet contract](http://earlz.net/view/2017/06/30/2144/the-qtum-sparknet-faucet)
+* [Qtep Book - A Developer's Guide To QTEP](http://book.qtep.site/en/)
+* [Qtep contract usage](https://docs.qtep.site/en/QRC20-Token-Introduce.html)
+* [Deploying a custom token to Qtep](https://blog.qtep.org/qtep-custom-token-walkthrough-467d725fa27d)
+* [QtepJS document](https://boxaltcoin.github.io/qtepjs-doc/)
+* [Smart contract ICO example](http://book.qtep.site/en/part3/ico.htm)
+* [Early example faucet contract](http://earlz.net/view/2017/06/30/2144/the-qtep-sparknet-faucet)
 
-General Info about Qtum:
+General Info about Qtep:
 
-* [CIRCLERESEARCH Qtum Primer](https://www.circle.com/marketing/pdfs/research/circle-research-qtum.pdf)
-* [Qtum's PoS vs CASPER](https://www.reddit.com/r/Qtum/comments/788oa5/qtums_pos_vs_casper_and_the_nothingatstake_problem/)
-* [Technical article explaining Qtum's PoS model in depth](http://earlz.net/view/2017/07/27/1904/the-missing-explanation-of-proof-of-stake-version)
+* [CIRCLERESEARCH Qtep Primer](https://www.circle.com/marketing/pdfs/research/circle-research-qtep.pdf)
+* [Qtep's PoS vs CASPER](https://www.reddit.com/r/Qtep/comments/788oa5/qteps_pos_vs_casper_and_the_nothingatstake_problem/)
+* [Technical article explaining Qtep's PoS model in depth](http://earlz.net/view/2017/07/27/1904/the-missing-explanation-of-proof-of-stake-version)
 
 
 Developer's Tools
@@ -53,101 +53,101 @@ Developer's Tools
 * Smart contract deployment tool
   * https://github.com/boxaltcoin/solar
 * DApp JavaScript Library
-  * https://github.com/boxaltcoin/qtumjs
-* A toolkit for building qtum light wallets
-  * https://github.com/boxaltcoin/qtumjs-wallet
-* CORS qtumd RPC proxy for DApp
-  * https://github.com/boxaltcoin/qtumportal
-* Docker images for running qtum services
-  * https://github.com/boxaltcoin/qtum-docker
-* qtum.info API that powers the block explorer and the QTUM Web wallet
-  * https://github.com/boxaltcoin/qtuminfo-api#qtuminfo-api-documentation
+  * https://github.com/boxaltcoin/qtepjs
+* A toolkit for building qtep light wallets
+  * https://github.com/boxaltcoin/qtepjs-wallet
+* CORS qtepd RPC proxy for DApp
+  * https://github.com/boxaltcoin/qtepportal
+* Docker images for running qtep services
+  * https://github.com/boxaltcoin/qtep-docker
+* qtep.info API that powers the block explorer and the QTEP Web wallet
+  * https://github.com/boxaltcoin/qtepinfo-api#qtepinfo-api-documentation
 
 
-What is Qtum Core?
+What is Qtep Core?
 ------------------
 
-Qtum Core is our primary mainnet wallet. It implements a full node and is capable of storing, validating, and distributing all history of the Qtum network. Qtum Core is considered the reference implementation for the Qtum network. 
+Qtep Core is our primary mainnet wallet. It implements a full node and is capable of storing, validating, and distributing all history of the Qtep network. Qtep Core is considered the reference implementation for the Qtep network. 
 
-Qtum Core currently implements the following:
+Qtep Core currently implements the following:
 
-* Sending/Receiving QTUM coins
-* Sending/Receiving QRC20 tokens on the Qtum network
-* Staking and creating blocks for the Qtum network
+* Sending/Receiving QTEP coins
+* Sending/Receiving QRC20 tokens on the Qtep network
+* Staking and creating blocks for the Qtep network
 * Creating and interacting with smart contracts
 * Running a full node for distributing the blockchain to other users
 * "Prune" mode, which minimizes disk usage
-* Regtest mode, which enables developers to very quickly build their own private Qtum network for Dapp testing
-* Testnet mode, using the public Qtum Testnet, with faucet available
+* Regtest mode, which enables developers to very quickly build their own private Qtep network for Dapp testing
+* Testnet mode, using the public Qtep Testnet, with faucet available
 * Compatibility with the Bitcoin Core set of RPC commands and APIs
 * Full SegWit capability with p2sh-segwit (legacy) and bech32 (native) addresses
 
 Alternative Wallets
 -------------------
 
-Qtum Core uses a full node model, and thus requires downloading the entire blockchain. If you do not need the entire blockchain, and do not intend on developing smart contracts, it may be more ideal to use an alternative wallet such as one of our light wallets that can be synchronized in a matter of seconds. 
+Qtep Core uses a full node model, and thus requires downloading the entire blockchain. If you do not need the entire blockchain, and do not intend on developing smart contracts, it may be more ideal to use an alternative wallet such as one of our light wallets that can be synchronized in a matter of seconds. 
 
-### Qtum Web Wallet
+### Qtep Web Wallet
 
 A browser wallet that supports the Ledger hardware wallet, offline cold wallet, and restoration from mobile wallets.
 
-Web site https://qtumwallet.org
+Web site https://qtepwallet.org
 
-User documentation https://github.com/boxaltcoin/documents/tree/master/en/QTUM-WebWallet-usage
+User documentation https://github.com/boxaltcoin/documents/tree/master/en/QTEP-WebWallet-usage
 
-### Qtum Electrum
+### Qtep Electrum
 
 A light wallet that supports the Ledger and Trezor hardware wallets and is based on the well-known Electrum wallet software. 
 
-Download: https://github.com/boxaltcoin/qtum-electrum/releases
+Download: https://github.com/boxaltcoin/qtep-electrum/releases
 
 ### iOS and Android Wallets
 
 These wallets run on mobile devices and synchronize quickly. 
 
-Android Download: https://play.google.com/store/apps/details?id=org.qtum.newwallet
+Android Download: https://play.google.com/store/apps/details?id=org.qtep.newwallet
 
-iOS Download: https://github.com/boxaltcoin/qtum-ios (open source, deprecated)
+iOS Download: https://github.com/boxaltcoin/qtep-ios (open source, deprecated)
 
 ### Ledger Chrome Wallet
 
 This light wallet runs in your Chrome browser as a browser extension. This wallet requires a Ledger device to use.
 
-How to install: https://ledger.zendesk.com/hc/en-us/articles/115003776913-How-to-install-and-use-Qtum-with-Ledger
+How to install: https://ledger.zendesk.com/hc/en-us/articles/115003776913-How-to-install-and-use-Qtep-with-Ledger
 
 
 ### Community Resources
 
-Make sure to check out these resources as well for more information and to keep up to date with all the latest news about Qtum. At least 1 developer is always around, so if you're developing on Qtum and need help, we'd love to welcome you to our community.
+Make sure to check out these resources as well for more information and to keep up to date with all the latest news about Qtep. At least 1 developer is always around, so if you're developing on Qtep and need help, we'd love to welcome you to our community.
 
-*	@Qtum on Twitter https://twitter.com/qtum
-* Qtum blog https://blog.qtum.org/
-*	Qtum Telegram Group https://t.me/qtumofficial, other languages available
-* Qtum Discord https://discordapp.com/invite/wRfmkQ9
-*	/r/Qtum on Reddit https://www.reddit.com/r/Qtum/
-*	Qtum.org https://qtum.org
-*	Qtum on Facebook https://www.facebook.com/QtumOfficial/
-*	Qtum Forum https://forum.qtum.org
+*	@Qtep on Twitter https://twitter.com/qtep
+* Qtep blog https://blog.qtep.org/
+*	Qtep Telegram Group https://t.me/qtepofficial, other languages available
+* Qtep Discord https://discordapp.com/invite/wRfmkQ9
+*	/r/Qtep on Reddit https://www.reddit.com/r/Qtep/
+*	Qtep.org https://qtep.org
+*	Qtep on Facebook https://www.facebook.com/QtepOfficial/
+*	Qtep Forum https://forum.qtep.org
 
-### Qtum Smart Contract Limitations
+### Qtep Smart Contract Limitations
 
 *	EVM smart contracts cannot receive coins from or send coins to any address type other than pay-to-pubkeyhash (starts with Q) addresses. This is due to a limitation in the EVM
 *	Contracts are not allowed to create contracts with an initial endowment of coins. The contract must first be created, and then be sent coins in a separate transaction. Humans are also not allowed to create contracts with an initial endowment of coins.
-*	Although all of the infrastructure is present, Qtum Core does not currently parse Solidity event data. You must parse this yourself using either searchlogs or -record-log-opcodes features.
+*	Although all of the infrastructure is present, Qtep Core does not currently parse Solidity event data. You must parse this yourself using either searchlogs or -record-log-opcodes features.
 *	It is not possible to send a contract coins without also executing the contract. This is also the case of Ethereum. This was promised in earlier discussions and technically does work, but due to lack of time for testing this feature was disabled. We hope to reenable this feature with release of the x86 virtual machine in 2020.
-*	In Qtum there can be multiple addresses used to create a proof-of-stake block. However, the EVM can only see the first output using the coinbase operation in Solidity (this address is also the one registered for the continuous staker rewards after 500 blocks).
+*	In Qtep there can be multiple addresses used to create a proof-of-stake block. However, the EVM can only see the first output using the coinbase operation in Solidity (this address is also the one registered for the continuous staker rewards after 500 blocks).
 
 ----------
 
-# Building Qtum Core
+# Building Qtep Core
 
 ### Validate and Reproduce Binaries
 
-Qtum uses a tool called Gitian to make reproducible builds that can be verified by anyone. Instructions on setting up a Gitian VM and building Qtum are provided in [Gitan Building](https://github.com/boxaltcoin/qtum/blob/master/doc/gitian-building.md)
+Qtep uses a tool called Gitian to make reproducible builds that can be verified by anyone. Instructions on setting up a Gitian VM and building Qtep are provided in [Gitan Building](https://github.com/boxaltcoin/qtep/blob/master/doc/gitian-building.md)
 
 ### Build on Ubuntu
 
-This is a quick start script for compiling Qtum on Ubuntu
+This is a quick start script for compiling Qtep on Ubuntu
 
 
     sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils git cmake libboost-all-dev libgmp3-dev
@@ -159,8 +159,8 @@ This is a quick start script for compiling Qtum on Ubuntu
     # If you want to build the Qt GUI:
     sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler qrencode
 
-    git clone https://github.com/boxaltcoin/qtum --recursive
-    cd qtum
+    git clone https://github.com/boxaltcoin/qtep --recursive
+    cd qtep
 
     # Note autogen will prompt to install some more dependencies if needed
     ./autogen.sh
@@ -169,7 +169,7 @@ This is a quick start script for compiling Qtum on Ubuntu
     
 ### Build on CentOS
 
-Here is a brief description for compiling Qtum on CentOS, for more details please refer to [the specific document](https://github.com/boxaltcoin/qtum/blob/master/doc/build-unix.md)
+Here is a brief description for compiling Qtep on CentOS, for more details please refer to [the specific document](https://github.com/boxaltcoin/qtep/blob/master/doc/build-unix.md)
 
     # Compiling boost manually
     sudo yum install python-devel bzip2-devel
@@ -181,16 +181,16 @@ Here is a brief description for compiling Qtum on CentOS, for more details pleas
     ./b2 headers
     sudo ./b2 -j4 install
     
-    # Installing Dependencies for Qtum
+    # Installing Dependencies for Qtep
     sudo yum install epel-release
     sudo yum install libtool libdb4-cxx-devel openssl-devel libevent-devel gmp-devel
     
     # If you want to build the Qt GUI:
     sudo yum install qt5-qttools-devel protobuf-devel qrencode-devel
     
-    # Building Qtum
-    git clone --recursive https://github.com/boxaltcoin/qtum.git
-    cd qtum
+    # Building Qtep
+    git clone --recursive https://github.com/boxaltcoin/qtep.git
+    cd qtep
     ./autogen.sh
     ./configure
     make -j4
@@ -216,16 +216,16 @@ Then install [Homebrew](https://brew.sh).
 
 NOTE: Building with Qt4 is still supported, however, could result in a broken UI. Building with Qt5 is recommended.
 
-#### Build Qtum Core
+#### Build Qtep Core
 
-1. Clone the qtum source code and cd into `qtum`
+1. Clone the qtep source code and cd into `qtep`
 
-        git clone --recursive https://github.com/boxaltcoin/qtum.git
-        cd qtum
+        git clone --recursive https://github.com/boxaltcoin/qtep.git
+        cd qtep
 
-2.  Build qtum-core:
+2.  Build qtep-core:
 
-    Configure and build the headless qtum binaries as well as the GUI (if Qt is found).
+    Configure and build the headless qtep binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -239,21 +239,21 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 
 ### Run
 
-Then you can either run the command-line daemon using `src/qtumd` and `src/qtum-cli`, or you can run the Qt GUI using `src/qt/qtum-qt`
+Then you can either run the command-line daemon using `src/qtepd` and `src/qtep-cli`, or you can run the Qt GUI using `src/qt/qtep-qt`
 
 License
 -------
 
-Qtum is GPLv3 licensed.
+Qtep is GPLv3 licensed.
 
 Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/boxaltcoin/qtum/tags) are created
-regularly to indicate new official, stable release versions of Qtum.
+completely stable. [Tags](https://github.com/boxaltcoin/qtep/tags) are created
+regularly to indicate new official, stable release versions of Qtep.
 
-The contribution workflow is described in [CONTRIBUTING.md](https://github.com/boxaltcoin/qtum/blob/master/CONTRIBUTING.md)
+The contribution workflow is described in [CONTRIBUTING.md](https://github.com/boxaltcoin/qtep/blob/master/CONTRIBUTING.md)
 and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).
 
 Testing

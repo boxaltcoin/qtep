@@ -1,2 +1,2 @@
-usr/local/bin/qtumd usr/bin
-usr/local/bin/qtum-cli usr/bin
+usr/local/bin/qtepd usr/bin
+usr/local/bin/qtep-cli usr/bin

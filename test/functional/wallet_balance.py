@@ -14,8 +14,8 @@ from test_framework.util import (
     connect_nodes,
     sync_blocks,
 )
-from test_framework.qtum import convert_btc_address_to_qtum, generatesynchronized
-from test_framework.qtumconfig import INITIAL_BLOCK_REWARD, COINBASE_MATURITY
+from test_framework.qtep import convert_btc_address_to_qtep, generatesynchronized
+from test_framework.qtepconfig import INITIAL_BLOCK_REWARD, COINBASE_MATURITY
 
 
 def create_transactions(node, address, amt, fees):
