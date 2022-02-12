@@ -412,7 +412,7 @@ COMMIT=2014_03_windows_unicode_path
 ./bin/gbuild --commit qtum=${COMMIT} --url qtum=${URL} ../qtum/contrib/gitian-descriptors/gitian-win.yml
 ./bin/gbuild --commit qtum=${COMMIT} --url qtum=${URL} ../qtum/contrib/gitian-descriptors/gitian-osx.yml
 # if wanting to use a different version of eth-cpp-qtum:
-./bin/gbuild --commit qtum=${COMMIT},cpp-eth-qtum=${ETHCOMMIT} --url qtum=${URL},cpp-eth-qtum=${ETHURL} ../qtum/contrib/gitian-descriptors/gitian-linux.yml
+./bin/gbuild --commit qtum=${COMMIT},cpp-eth-qtep=${ETHCOMMIT} --url qtum=${URL},cpp-eth-qtep=${ETHURL} ../qtum/contrib/gitian-descriptors/gitian-linux.yml
 ```
 
 Building fully offline
