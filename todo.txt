@@ -1,0 +1,97 @@
+
+############################ Change info master ####################################
+
+find ./ -type f -readable -writable -exec sed -i "s/qtumproject/boxaltcoin/g" {} \;
+
+find ./ -type f -readable -writable -exec sed -i "s/cpp-eth-qtum/cpp-eth-qtep/g" {} \;
+
+git submodule update --init --recursive
+
+
+############################ Change info submodule ####################################
+
+cd Desktop/qtep/scr/cpp-eth-qtep
+
+
+find ./ -type f -readable -writable -exec sed -i "s/Qtum/Qtep/g" {} \;
+
+find ./ -type f -readable -writable -exec sed -i "s/QTUM/QTEP/g" {} \;
+
+find ./ -type f -readable -writable -exec sed -i "s/qtum/qtep/g" {} \;
+
+############# git submodule update --remote ####################
+
+git submodule sync
+
+
+
+############################ Rename ####################################
+
+sudo apt install rename
+
+cd qtep/src/cpp-ethereum/libethashseal/genesis
+
+find . -exec rename 's/qtum/qtep/' {} ";"
+
+
+############################ Rename after change folder name for master ####################################
+
+sudo apt install rename
+
+find . -exec rename 's/qtum/qtep/' {} ";"
+
+
+
+
+############################## Make publickey ##################################
+
+openssl ecparam -genkey -name secp256k1 -out genesiscoinbase.pem
+
+openssl ec -in genesiscoinbase.pem -text > genesiscoinbase.hex
+
+################################################################
+
+date +%s
+
+
+############################## Genesis hash Debug ##################################
+
+
+
+############################## Find genesis hash, nonce debug.log ##################################
+
+
+
+############## MainNet Find ##############
+
+
+
+############## TestNet Find ##############
+
+
+
+############## RegTest Find ##############
+
+
+
+
+############################### Change magic key make new chain #################################
+
+
+
+consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");// Start
+
+https://en.bitcoin.it/wiki/List_of_address_prefixes
+
+48 	L 
+
+70-71 	V 
+132-133 	v 
+
+############################### Build #################################
+
+./autogen.sh
+
+./configure
+
+make -j4
